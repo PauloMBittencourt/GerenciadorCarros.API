@@ -1,7 +1,16 @@
+using GerenciadorCarros.API.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add a DataBase
+builder.Services.AddDbContext<DataBaseContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
+
+// Add Mvc
+builder.Services.AddMvc();
 
 var app = builder.Build();
 
