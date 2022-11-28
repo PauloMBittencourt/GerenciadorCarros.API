@@ -1,8 +1,73 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "AutoVendas - Seu site de compra e vendas de carros usados";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">AutoVendas  - Seu site de compra e venda de carro</h1>
+            <p class="lead text-muted">O site AutoVendas conta com as melhores oportunidades do mercado para você que deseja comprar ou vender o seu usado. Escolha uma das opções abaixo.</p>
+            <figure class="figure">
+                <img src="https://img.freepik.com/vetores-gratis/carro-esportivo-azul-isolado-no-branco-vector_53876-67418.jpg?w=2000" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
+            </figure>
+            <p>
+                <a class="btn btn-primary my-10" asp-area="" asp-controller="Carroes" asp-action="Index">Vender um veículo</a>
+                <a class="btn btn-primary my-10" asp-area="" asp-controller="Carroes" asp-action="Create">Cadastrar veículo</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<main>
+    <h2>Acompanhe as ofertas <span class="badge badge-secondary"></span></h2>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="card-group">
+                <div class="card">
+                    <img src="@ViewBag.img1" class="card-img-top" " alt="@ViewBag.Oferta1Nome">
+                    <div class="card-body">
+                        <h5 class="card-title">@ViewBag.Oferta1Nome</h5>
+                        <p class="card-text">@ViewBag.Desc1</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
+                            </div>
+                            <small class="font-weight-bold">R$@ViewBag.Valor1</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="@ViewBag.img2" class="card-img-top" " alt="@ViewBag.Oferta2Nome">
+                    <div class="card-body">
+                        <h5 class="card-title">@ViewBag.Oferta2Nome</h5>
+                        <p class="card-text">@ViewBag.Desc2</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
+                            </div>
+                            <small class="font-weight-bold">R$@ViewBag.Valor2</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="@ViewBag.img3" class="card-img-top" " alt="@ViewBag.Oferta3Nome">
+                    <div class="card-body">
+                        <h5 class="card-title">@ViewBag.Oferta3Nome</h5>
+                        <p class="card-text">@ViewBag.Desc3</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
+                            </div>
+                            <small class="font-weight-bold">R$@ViewBag.Valor3</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</main>

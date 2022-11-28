@@ -29,7 +29,7 @@ namespace GerenciadorCarros.API.Controllers
         {
             if (id == null || _context.Carros == null)
             {
-                return NotFound();
+                return NotFound("Não há esse carro cadastrado no momento");
             }
 
             var carro = await _context.Carros

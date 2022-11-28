@@ -13,13 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Modelo)
+                Modelo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Ano)
+                Ano
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Usado)
+                Estado
+            </th>
+            <th>
+                Ações do sistema
             </th>
             <th></th>
         </tr>
@@ -34,12 +37,20 @@
                 @Html.DisplayFor(modelItem => item.Ano)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Usado)
+                    @if(!item.Usado)
+                    {
+@*                    @Html.DisplayFor(modelItem => item.Usado)*@
+                        <span class="badge bg-success">Novo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-info text-dark">Usado</span>
+                    }
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar informações</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Datelhes do veículo</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Apagar veículo</a>
             </td>
         </tr>
 }
