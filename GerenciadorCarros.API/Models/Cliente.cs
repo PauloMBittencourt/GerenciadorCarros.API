@@ -20,6 +20,12 @@ namespace GerenciadorCarros.API.Models
                      
         [Column(TypeName = "varchar(100)")]
         [DisplayName("Email")]
+        [Required(ErrorMessage = "Informe seu email")]
         public string? Email { get; set; }
+
+        [Required(ErrorMessage = "Informe a sua senha")]
+        [Column(TypeName = "varchar(100)")]
+        [DisplayName("Password")]
+        public string? Password { get; set; }
     }
 }
