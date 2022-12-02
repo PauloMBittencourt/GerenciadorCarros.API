@@ -19,9 +19,12 @@ namespace GerenciadorCarros.API.Models
         [DisplayName("Ano")]
         public string? Ano { get; set; }
 
-
         [Column(TypeName = "int")]
         [DisplayName("Usado")]
-        public bool Usado { get; set; } 
+        public bool Usado { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        [DisplayName("Preco")]
+        public string Preco { get; set; }
     }
 }

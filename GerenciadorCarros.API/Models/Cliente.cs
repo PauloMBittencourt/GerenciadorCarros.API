@@ -27,5 +27,10 @@ namespace GerenciadorCarros.API.Models
         [Column(TypeName = "varchar(100)")]
         [DisplayName("Password")]
         public string? Password { get; set; }
+
+        public bool PasswordValid(string password)
+        {
+            return Password == password;
+        }
     }
 }

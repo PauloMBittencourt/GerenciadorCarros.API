@@ -19,6 +19,9 @@
                 Ano
             </th>
             <th>
+                Preço
+            </th>
+            <th>
                 Estado
             </th>
             <th>
@@ -35,6 +38,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Ano)
+            </td>
+            <td>
+                R$@Html.DisplayFor(modelItem => item.Preco)
             </td>
             <td>
                     @if(!item.Usado)

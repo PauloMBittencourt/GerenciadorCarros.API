@@ -53,7 +53,7 @@ namespace GerenciadorCarros.API.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Modelo,Ano,Usado")] Carro carro)
+        public async Task<IActionResult> Create([Bind("Id,Modelo,Ano,Usado,Preco")] Carro carro)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace GerenciadorCarros.API.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Modelo,Ano,Usado")] Carro carro)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Modelo,Ano,Usado,Preco")] Carro carro)
         {
             if (id != carro.Id)
             {
